@@ -10715,9 +10715,9 @@ exports._UnsupportedManager = _UnsupportedManager;
   PDFJS.workerSrc = (PDFJS.workerSrc === undefined ? null : PDFJS.workerSrc);
   if (!PDFJS.workerSrc && typeof document !== 'undefined') {
     // workerSrc is not set -- using last script url to define default location
-    ****** I have no clue what the code below hope to accomplish ********
+    /****** I have no clue what the code below hope to accomplish ********
     ****** How can it locate the script container by assuming it ********
-    ****** always would be at the end of <body> or <head> ????   ********
+    ****** always would be at the end of <body> or <head> ????   ********/
     PDFJS.workerSrc = (function () {
       'use strict';
       var scriptTagContainer = document.body ||
