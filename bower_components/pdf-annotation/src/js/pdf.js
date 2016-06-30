@@ -2789,7 +2789,7 @@ FontLoader.prototype = {
         ctx.fillText('.', 0, 20);
         var imageData = ctx.getImageData(0, 0, 1, 1);
         if (imageData.data[3] > 0) {
-          callback();
+          //callback();
           return;
         }
         setTimeout(isFontReady.bind(null, name, callback));
