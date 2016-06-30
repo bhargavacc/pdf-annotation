@@ -1904,7 +1904,7 @@
       this.options.pdfOptions = options || {scale: 2};
       factoryObj.options.toolsObj.loading.textContent = 'Wait while loading PDF file...';
 
-      PDFJS.disableWorker = false;
+      PDFJS.disableWorker = true;
       PDFJS.getDocument(url).then(factoryObj.renderPages);
     }
 
