@@ -1905,7 +1905,7 @@
       factoryObj.options.toolsObj.loading.textContent = 'Wait while loading PDF file...';
 
       PDFJS.disableWorker = false;
-      PDFJS.workerSrc = 'bower_components/pdf-annotation/src/js/pdf.worker.js';
+      PDFJS.workerSrc = 'pdf.worker.js';
       PDFJS.getDocument(url).then(factoryObj.renderPages, factoryObj.renderError);
     }
     
