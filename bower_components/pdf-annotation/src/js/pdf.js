@@ -2782,18 +2782,14 @@ FontLoader.prototype = {
         // With setTimeout clamping this gives the font ~100ms to load.
         if(called > 30) {
           warn('Load test font never loaded.');
-          if (callback && typeof(callback) === "function") {
-            callback();
-          }
+          callback();
           return;
         }
         ctx.font = '30px ' + name;
         ctx.fillText('.', 0, 20);
         var imageData = ctx.getImageData(0, 0, 1, 1);
         if (imageData.data[3] > 0) {
-          if (callback && typeof(callback) === "function") {
-            callback();
-          }
+          callback();
           return;
         }
         setTimeout(isFontReady.bind(null, name, callback));
@@ -10717,7 +10713,6 @@ exports._UnsupportedManager = _UnsupportedManager;
    * @var {string}
    */
   PDFJS.workerSrc = (PDFJS.workerSrc === undefined ? null : PDFJS.workerSrc);
-  
 
   /**
    * Disable range request loading of PDF files. When enabled and if the server
