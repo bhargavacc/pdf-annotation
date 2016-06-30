@@ -10712,7 +10712,7 @@ exports._UnsupportedManager = _UnsupportedManager;
    * by third-party frameworks and libraries.
    * @var {string}
    */
-  //PDFJS.workerSrc = (PDFJS.workerSrc === undefined ? null : PDFJS.workerSrc);
+  PDFJS.workerSrc = (PDFJS.workerSrc === undefined ? null : PDFJS.workerSrc);
   if (!PDFJS.workerSrc && typeof document !== 'undefined') {
     // workerSrc is not set -- using last script url to define default location
     ****** I have no clue what the code below hope to accomplish ********
