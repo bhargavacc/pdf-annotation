@@ -10713,25 +10713,7 @@ exports._UnsupportedManager = _UnsupportedManager;
    * @var {string}
    */
   PDFJS.workerSrc = (PDFJS.workerSrc === undefined ? null : PDFJS.workerSrc);
-  if (!PDFJS.workerSrc && typeof document !== 'undefined') {
-    // workerSrc is not set -- using last script url to define default location
-    /****** I have no clue what the code below hope to accomplish ********
-    ****** How can it locate the script container by assuming it ********
-    ****** always would be at the end of <body> or <head> ????   ********/
-    PDFJS.workerSrc = (function () {
-      'use strict';
-      var scriptTagContainer = document.body ||
-                               document.getElementsByTagName('head')[0];
-      var pdfjsSrc = scriptTagContainer.lastChild.src;
-      return pdfjsSrc && pdfjsSrc.replace(/\.js$/i, '.worker.js');
-    })();
   
-  
-    /****** Here I just hardcode the location of the needed file *********
-    ****** This is the part that makes it work.                 *********
-    ****** Obviously, tailor this to the same path of pdf.js    *********/
-    PDFJS.workerSrc = 'pdf.worker.js';
-  }
 
   /**
    * Disable range request loading of PDF files. When enabled and if the server
