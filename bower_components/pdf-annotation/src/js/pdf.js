@@ -10727,9 +10727,9 @@ exports._UnsupportedManager = _UnsupportedManager;
     })();
   
   
-    ****** Here I just hardcode the location of the needed file *********
+    /****** Here I just hardcode the location of the needed file *********
     ****** This is the part that makes it work.                 *********
-    ****** Obviously, tailor this to the same path of pdf.js    *********
+    ****** Obviously, tailor this to the same path of pdf.js    *********/
     PDFJS.workerSrc = 'pdf.worker.js';
   }
 
