@@ -1905,12 +1905,7 @@
       factoryObj.options.toolsObj.loading.textContent = 'Wait while loading PDF file...';
 
       PDFJS.disableWorker = false;
-      PDFJS.workerSrc = 'pdf.worker.js';
-      PDFJS.getDocument(url).then(factoryObj.renderPages, factoryObj.renderError);
-    }
-    
-    factoryObj.renderError = function() {
-      console.log('Error while rendering PDF.');
+      PDFJS.getDocument(url).then(factoryObj.renderPages);
     }
 
     //factoryObj.defaultObj = JSON.parse(JSON.stringify(factoryObj));
